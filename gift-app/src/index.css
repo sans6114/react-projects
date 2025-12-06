@@ -1,0 +1,7 @@
+@import "tailwindcss";
+@plugin "daisyui";
+@layer utilities {
+  .grid-auto-fill {
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  }
+}
