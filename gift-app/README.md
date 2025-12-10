@@ -1,69 +1,70 @@
-# React + TypeScript + Vite
+# Gif App - Proyecto de Aprendizaje React + TypeScript - curso "react de cero a experto, Fernando Herrera"
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Una aplicación para buscar GIFs que me ayudó a aprender conceptos de primeros conceptos sobre hooks, manejo de peticiones HTTP en react, TypeScript y mucho más.
 
-Currently, two official plugins are available:
+## 🚀 Lo Que Aprendí
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **React Hooks**: useState, useRef, useEffect y custom hooks
+- **TypeScript**: Interfaces, tipado estricto y configuración con Vite
+- **HTTP & APIs**: Axios, cache, manejo de errores y variables de entorno
+- **Performance**: Debouncing, cache en memoria y optimización de re-renders
+- **Herramientas**: ESLint + Prettier, configuración de VS Code
 
-## Expanding the ESLint configuration
+## ⚙️ Configuración Rápida
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+### 1. Instalar dependencias
 
-```js
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-
-      // Remove tseslint.configs.recommended and replace with this
-      ...tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      ...tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      ...tseslint.configs.stylisticTypeChecked,
-
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+```bash
+npm install
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+### 2. Configurar API Key
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+Crea `.env` en la raíz:
 
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+```env
+VITE_GIPHY_API_KEY=tu_api_key_de_giphy
 ```
+
+**Obtener API Key:**
+
+1. Ve a [Giphy Developers](https://developers.giphy.com/)
+2. Regístrate y crea una app
+3. Copia la API Key
+
+### 3. Ejecutar
+
+```bash
+npm run dev
+```
+
+## 📁 Estructura de directorios
+
+```
+src/
+├── gif/
+│   ├── actions/    # Peticiones HTTP
+│   ├── hooks/      # Custom hooks
+│   └── interfaces/ # Tipos TypeScript
+└── shared/         # Componentes reutilizables
+```
+
+## 🎯 Funcionalidades
+
+- ✅ Búsqueda de GIFs con debounce
+- ✅ Cache inteligente (evita peticiones duplicadas, revisar ambas opciones de implementación)
+- ✅ Historial de últimas 4 búsquedas
+- ✅ Diseño responsive con Tailwind CSS (probablemente haya errores, el foco no esta ahi, si gustan cambiarlo seria genial)
+
+## 🛠️ Scripts
+
+```bash
+npm run dev      # Desarrollo
+npm run build    # Build producción
+npm run lint:fix # Arreglar código automáticamente
+npm run format   # Formatear con Prettier
+```
+
+---
+
+**Proyecto que me ayudo a seguir avanzando en mi aprendisaje de React y TypeScript. 🚀**

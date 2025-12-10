@@ -23,24 +23,25 @@ export const InputSearch = ({ onQuery, placeholder = '...', className = '' }: Pr
         setQuery('')
     }
 
+    const handleClickDown = (e: React.KeyboardEvent<HTMLInputElement>) => {
+         if(e.key === 'Enter') {
+            handleChangeQuery()
+         }
+    }
+
     useEffect(() => {
+        //debounce implementacion
         if(query.length > 1) {
             const timeOutId = setTimeout(() => {
                 const newQuery: string = query.toLowerCase().trim();
                 onQuery(newQuery);
-            }, 700)
-
+            }, 700) //cada vez que el usuario cambia el valor del input, se esperan 700ms para ejecutar la busqueda.
             return () => {
                 clearTimeout(timeOutId)
             }
         }
     }, [query, onQuery])
 
-    const handleClickDown = (e: React.KeyboardEvent<HTMLInputElement>) => {
-         if(e.key === 'Enter') {
-            handleChangeQuery()
-         }
-    }
     return (
         <div className={`flex gap-2 justify-center ${className}`}>
             <label className="input">
