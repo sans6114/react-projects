@@ -1,8 +1,8 @@
 import { GifList } from './gif/components/GifList';
+import { InputSearch } from './gif/components/InputSearch';
 import { PreviousSearch } from './gif/components/PreviousSearch';
 import { useGif } from './gif/hooks/useGif';
 import { CustomHeader } from './shared/components/CustomHeader';
-import { InputSearch } from './shared/components/InputSearch';
 
 //componente en el que vive mi aplicacion, buena practica para separarlo de main.tsx.
 export const GiftsApp = () => {

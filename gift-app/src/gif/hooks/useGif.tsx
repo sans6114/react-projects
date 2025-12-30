@@ -1,4 +1,7 @@
-import { useRef, useState } from 'react';
+import {
+    useRef,
+    useState,
+} from 'react';
 
 import { getByQuery } from '../actions/get-giphy-by-query';
 import type { Gif } from '../interfaces/gif';
@@ -10,7 +13,7 @@ import type { Gif } from '../interfaces/gif';
 export const useGif = () => {
     //dos estados, uno para el valor del input de busqueda y otro para las busquedas previas(contenedor div)
     const [gifList, setGifList] = useState<Gif[]>([]);
-    const [previousSearches, setPreviousSearches] = useState<string[]>([]); //uso tipado estricto para el array.
+    const [previousSearches, setPreviousSearches] = useState<string[]>([]);
 
     const gifCache = useRef<Record<string, Gif[]>>({});
 
@@ -18,6 +21,14 @@ export const useGif = () => {
         if (gifCache.current[term]) {
             setGifList(gifCache.current[term]);
             return;
+        } else {
+            const gifs = await getByQuery(term);
+            setGifList(gifs);
+            //agregado a la cache
+            gifCache.current[term] = gifs;
+            setPreviousSearches(prev => {
+                return [term, ...prev].slice(0, 4);
+            });
         }
     };
 

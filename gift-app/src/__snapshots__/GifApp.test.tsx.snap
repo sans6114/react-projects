@@ -1,0 +1,92 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`gifApp > should render component properly 1`] = `
+<div>
+  <div
+    class="min-h-screen flex flex-col gap-10"
+  >
+    <div
+      class="hero p-10"
+    >
+      <div
+        class="hero-content text-center"
+      >
+        <div
+          class="max-w-md"
+        >
+          <h1
+            class="text-5xl font-bold"
+          >
+            Buscador de gifts
+          </h1>
+          <p
+            class="py-6"
+          >
+            Busca y descubre un gift para descargar y compartir.
+          </p>
+        </div>
+      </div>
+    </div>
+    <div
+      class="flex gap-2 justify-center "
+    >
+      <label
+        class="input"
+      >
+        <svg
+          fill="currentColor"
+          height="24"
+          id="search"
+          stroke="currentColor"
+          stroke-width="0"
+          version="1.1"
+          viewBox="0 0 24 24"
+          width="24"
+          x="0px"
+          xmlns="http://www.w3.org/2000/svg"
+          y="0px"
+        >
+          <g>
+            <path
+              d="M20.031,20.79c0.46,0.46,1.17-0.25,0.71-0.7l-3.75-3.76c1.27-1.41,2.04-3.27,2.04-5.31
+		c0-4.39-3.57-7.96-7.96-7.96s-7.96,3.57-7.96,7.96c0,4.39,3.57,7.96,7.96,7.96c1.98,0,3.81-0.73,5.21-1.94L20.031,20.79z
+		 M4.11,11.02c0-3.84,3.13-6.96,6.96-6.96c3.84,0,6.96,3.12,6.96,6.96c0,3.84-3.12,6.96-6.96,6.96C7.24,17.98,4.11,14.86,4.11,11.02
+		z"
+            />
+          </g>
+        </svg>
+        <input
+          class="grow"
+          placeholder="Superman gift"
+          type="search"
+          value=""
+        />
+      </label>
+      <button
+        class="btn btn-primary"
+      >
+        buscar
+      </button>
+    </div>
+    <div
+      class="flex flex-col gap-y-4 items-center"
+    >
+      <h2
+        class="text-2xl font-bold"
+      >
+        Busquedas previas
+      </h2>
+      <ul
+        class="flex gap-2 items-center"
+      >
+        <span>
+          No hay busquedas previas
+        </span>
+      </ul>
+    </div>
+    <div
+      class="grid grid-auto-fill gap-4 w-3/4 mx-auto"
+    />
+  </div>
+</div>
+`;
