@@ -1,8 +1,4 @@
-import {
-  useOptimistic,
-  useState,
-  useTransition,
-} from "react";
+import { useOptimistic, useState, useTransition } from "react";
 
 import { toast } from "sonner";
 
@@ -34,7 +30,7 @@ export const InstagramApp = () => {
     },
   );
 
-  const handleAddComment = async (formData: FormData) => {
+  const handleAddComment = (formData: FormData) => {
     const messageText = formData.get("post-message") as string;
 
     addOptimisticComment(messageText);
@@ -44,13 +40,13 @@ export const InstagramApp = () => {
       console.log("mensaje grabado");
       lastId++;
 
-      //   setComments((prev) => [
-      //     ...prev,
-      //     {
-      //       id: lastId,
-      //       text: messageText,
-      //     },
-      //   ]);
+      // setComments((prev) => [
+      //   ...prev,
+      //   {
+      //     id: lastId,
+      //     text: messageText,
+      //   },
+      // ]);
 
       //!simular fallo (revertir el proceso)
 

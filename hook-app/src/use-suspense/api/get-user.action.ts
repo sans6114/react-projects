@@ -5,6 +5,13 @@ export interface User {
   role: string;
 }
 
-export const getUserAction = async () => {
+export const getUserAction = async (id: number) => {
   await new Promise((res) => setTimeout(res, 2000));
+
+  return {
+    id: id,
+    name: "Santiago Sosa",
+    location: "La Plata",
+    role: "Lider",
+  };
 };
