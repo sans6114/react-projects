@@ -1,13 +1,24 @@
-import React from "react";
+import React from 'react';
 
-import { Brain, Eye, Gauge, Heart, Shield, Zap } from "lucide-react";
-import { useNavigate } from "react-router";
+import {
+  Brain,
+  Eye,
+  Gauge,
+  Heart,
+  Shield,
+  Zap,
+} from 'lucide-react';
+import { useNavigate } from 'react-router';
 
-import { Badge } from "@/components/ui/badge";
-import { Button } from "@/components/ui/button";
-import { Card, CardContent, CardHeader } from "@/components/ui/card";
-import { Progress } from "@/components/ui/progress";
-import type { Hero } from "@/heroes/interfaces/Hero.interface";
+import { Badge } from '@/components/ui/badge';
+import { Button } from '@/components/ui/button';
+import {
+  Card,
+  CardContent,
+  CardHeader,
+} from '@/components/ui/card';
+import { Progress } from '@/components/ui/progress';
+import type { Hero } from '@/heroes/interfaces/Hero.interface';
 
 interface Props {
   heroe: Hero;
